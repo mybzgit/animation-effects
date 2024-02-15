@@ -1,0 +1,9 @@
+.settings-panel {
+  width: 240px;
+  background-color: white;
+  padding: 15px 13px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 16px;
+}

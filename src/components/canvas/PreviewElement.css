@@ -1,0 +1,7 @@
+.preview-element {
+  position: absolute;
+}
+
+.preview-element-outline {
+  outline: 1px dotted #3e87f8;
+}

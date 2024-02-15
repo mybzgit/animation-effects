@@ -1,0 +1,20 @@
+select {
+  border: none;
+  font-size: 12px;
+  color: #444444;
+  width: 100%;
+  padding-right: 17px;
+  max-width: max-content;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url('/src/assets/arrow.svg');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 5px;
+}
+
+select:focus {
+  outline: none;
+}

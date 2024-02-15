@@ -1,0 +1,18 @@
+.switch {
+  width: 20px;
+  height: 12px;
+  background-color: #afafaf;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 2px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.round {
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  border-radius: 50%;
+}

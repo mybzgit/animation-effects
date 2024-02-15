@@ -1,0 +1,36 @@
+.canvas {
+  background-color: white;
+  height: 498px;
+  position: relative;
+}
+
+.heading {
+  font-size: 43px;
+  font-weight: bold;
+  margin: 0;
+  letter-spacing: -2px;
+}
+
+.paragraph {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 147%;
+  width: 374px;
+  margin: 0;
+}
+
+.image {
+  width: 300px;
+  height: 300px;
+  border-radius: 3px;
+}
+
+.canvas-button {
+  background-color: #70b2ff;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  width: 136px;
+  height: 41px;
+  border-radius: 4px;
+}
