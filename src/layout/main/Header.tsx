@@ -8,7 +8,7 @@ const Header = () => {
       <button
         className='preview-button'
         onClick={() => {
-          window.open(`${window.location.origin}/preview`)
+          window.open(`${window.location.href}preview`)
         }}
       >
         Preview
