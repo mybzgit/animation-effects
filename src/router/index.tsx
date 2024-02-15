@@ -4,7 +4,7 @@ import Preview from '../pages/Preview'
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/animation-effects/'>
       <Routes>
         <Route path='/'>
           <Route index element={<Main />} />
