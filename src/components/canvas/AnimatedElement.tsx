@@ -44,12 +44,12 @@ const AnimatedElement = ({
       <style>
         {`@keyframes anim-${elementId} {
           from, to {
-            transform: scale(1) translateY(${initialPosition.y}px) translateX(${initialPosition.x}px);
+            transform: translateY(${initialPosition.y}px) translateX(${initialPosition.x}px) scale(1);
             opacity: 1;
             filter: blur(0px);
           }
           50% {
-            transform: scale(${elementOptions?.scale}) translateY(${(elementOptions?.y ?? 0) + initialPosition.y}px) translateX(${(elementOptions?.x ?? 0) + initialPosition.x}px);
+            transform: translateY(${(elementOptions?.y ?? 0) + initialPosition.y}px) translateX(${(elementOptions?.x ?? 0) + initialPosition.x}px) scale(${elementOptions?.scale});
             opacity: ${elementOptions?.opacity ?? 1};
             filter: blur(${elementOptions?.blur}px);
           }
