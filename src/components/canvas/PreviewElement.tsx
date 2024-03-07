@@ -34,9 +34,7 @@ const PreviewElement = observer(
             (showOutline ? ' preview-element-outline' : '')
           }
           style={{
-            top: `${(elementOptions?.y ?? 0) + initialPosition.y}px`,
-            left: `${(elementOptions?.x ?? 0) + initialPosition.x}px`,
-            transform: `scale(${elementOptions?.scale})`,
+            transform: `translateY(${(elementOptions?.y ?? 0) + initialPosition.y}px) translateX(${(elementOptions?.x ?? 0) + initialPosition.x}px) scale(${elementOptions?.scale}) `,
           }}
         >
           <div

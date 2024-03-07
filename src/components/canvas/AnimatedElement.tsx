@@ -9,14 +9,12 @@ type Props = {
     x: number
     y: number
   }
-  animate?: boolean
 }
 
 const AnimatedElement = ({
   children,
   elementId,
   initialPosition,
-  animate = false,
 }: Props) => {
   const { getOptions } = canvasStore
 
@@ -29,33 +27,29 @@ const AnimatedElement = ({
       <div
         style={{
           position: 'absolute',
-          top: `${initialPosition.y}px`,
-          left: `${initialPosition.x}px`,
+          top: 0,
+          left: 0,
+          animationName: `anim-${elementId}`,
           animationDelay: `.${elementOptions?.delay}s`,
           animationDuration: `${elementOptions.speed}s`,
           animationIterationCount: elementOptions.replay
             ? 'infinite'
             : '1',
           animationTimingFunction: `${elementOptions.easing}`,
-          animationPlayState: animate == true ? 'running' : 'paused',
-          animationName: `anim-${elementId}`,
+          animationFillMode: 'both'
         }}
       >
         {children}
       </div>
       <style>
         {`@keyframes anim-${elementId} {
-          0% {
-            top: ${initialPosition.y}px;
-            left: ${initialPosition.x}px;
-            transform: scale(1);
+          from, to {
+            transform: scale(1) translateY(${initialPosition.y}px) translateX(${initialPosition.x}px);
             opacity: 1;
             filter: blur(0px);
           }
           50% {
-            top: ${(elementOptions?.y ?? 0) + initialPosition.y}px;
-            left: ${(elementOptions?.x ?? 0) + initialPosition.x}px;
-            transform: scale(${elementOptions?.scale});
+            transform: scale(${elementOptions?.scale}) translateY(${(elementOptions?.y ?? 0) + initialPosition.y}px) translateX(${(elementOptions?.x ?? 0) + initialPosition.x}px);
             opacity: ${elementOptions?.opacity ?? 1};
             filter: blur(${elementOptions?.blur}px);
           }

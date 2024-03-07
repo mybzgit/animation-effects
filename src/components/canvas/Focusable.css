@@ -1,8 +1,14 @@
-.focusable-element {
-  width: auto;
+.focusable-element-initial {
+  width: max-content;
   height: auto;
-  outline: 1px solid #3e87f8;
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.focusable-element-focused {
+  outline: 1px solid #3e87f8;
 }
 
 .focusable-element-node {

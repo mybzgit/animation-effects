@@ -28,12 +28,10 @@ const Focusable = ({
 
   return (
     <div
-      className={elementId == focusId ? ' focusable-element' : ''}
+      className={'focusable-element-initial' + (elementId == focusId ? ' focusable-element-focused' : '')}
       onClick={onClick}
       style={{
-        position: 'absolute',
-        top: `${initialPosition.y}px`,
-        left: `${initialPosition.x}px`,
+        transform: `translateY(${initialPosition.y}px) translateX(${initialPosition.x}px)`,
       }}
     >
       <span className={nodeClass}></span>

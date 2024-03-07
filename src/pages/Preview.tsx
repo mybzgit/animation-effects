@@ -16,7 +16,6 @@ const Preview = () => {
       <AnimatedElement
         elementId='heading'
         initialPosition={headingInitPosition}
-        animate={true}
       >
         <Heading />
       </AnimatedElement>
@@ -24,7 +23,6 @@ const Preview = () => {
       <AnimatedElement
         elementId='paragraph'
         initialPosition={paragraphInitPosition}
-        animate
       >
         <Paragraph />
       </AnimatedElement>
@@ -32,7 +30,6 @@ const Preview = () => {
       <AnimatedElement
         elementId='image'
         initialPosition={imageInitPosition}
-        animate
       >
         <Image />
       </AnimatedElement>
@@ -40,7 +37,6 @@ const Preview = () => {
       <AnimatedElement
         elementId='button'
         initialPosition={buttonInitPosition}
-        animate
       >
         <Button />
       </AnimatedElement>
